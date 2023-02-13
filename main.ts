@@ -52,6 +52,8 @@ basic.forever(function () {
             `)
         if (1 == drive) {
             Kitronik_Move_Motor.move(Kitronik_Move_Motor.DriveDirections.Forward, 30)
+        } else {
+            Kitronik_Move_Motor.stop()
         }
     }
 })
