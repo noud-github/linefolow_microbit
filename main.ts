@@ -14,7 +14,7 @@ Kitronik_Move_Motor.setUltrasonicUnits(Kitronik_Move_Motor.Units.Centimeters)
 basic.forever(function () {
     rightsensor = Kitronik_Move_Motor.readSensor(Kitronik_Move_Motor.LfSensor.Right)
     leftsensor = Kitronik_Move_Motor.readSensor(Kitronik_Move_Motor.LfSensor.Left)
-    sensordiff = Math.abs(leftsensor) - Math.abs(rightsensor)
+    sensordiff = Math.abs(leftsensor) - rightsensor
     if (sensordiff > 10) {
         if (rightsensor < leftsensor) {
             basic.showLeds(`
