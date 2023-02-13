@@ -15,8 +15,8 @@ basic.forever(function () {
     rightsensor = Kitronik_Move_Motor.readSensor(Kitronik_Move_Motor.LfSensor.Right)
     leftsensor = Kitronik_Move_Motor.readSensor(Kitronik_Move_Motor.LfSensor.Left)
     sensordiff = Math.abs(leftsensor) - Math.abs(rightsensor)
-    if (true) {
-        if (true) {
+    if (sensordiff > 10) {
+        if (rightsensor < leftsensor) {
             basic.showLeds(`
                 . . # . .
                 . . . # .
